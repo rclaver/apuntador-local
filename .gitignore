@@ -1,0 +1,9 @@
+.htaccess
+.env
+tmp/
+*.mp3
+*.wav
+*.pyc
+.venv
+.spyproject
+__pycache__/
