@@ -18,7 +18,7 @@ import os, re, time, glob
 import difflib
 import threading
 
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 #from dotenv import load_dotenv
 
@@ -41,7 +41,8 @@ C_NONE="\033[0m"
 CB_YLW="\033[1;33m"
 CB_BLU="\033[1;34m"
 
-titol = "casats"
+#titol = "casats"
+titol = "eldubte"
 actor = ""
 estat = "inici"
 fil = None
@@ -65,14 +66,18 @@ beep_error = f"{dir_recursos}/error.wav"
 pendent_escolta = False  #indica si ha arribat el moment d'escoltar l'actor
 audio_pendent = None
 
-Personatges = {'Joan':   {'speed': 1.20, 'grave': 3.6, 'reduction': 0.6},
-               'Gisela': {'speed': 1.30, 'grave': 0.9, 'reduction': 1.7},
-               'Mar':    {'speed': 1.40, 'grave': 0.6, 'reduction': 1.4},
-               'Emma':   {'speed': 1.40, 'grave': 0.7, 'reduction': 1.0},
-               'Tina':   {'speed': 1.30, 'grave': 1.1, 'reduction': 1.0},
-               'Justa':  {'speed': 1.40, 'grave': 1.8, 'reduction': 0.9},
-               'Pompeu': {'speed': 1.40, 'grave': 2.2, 'reduction': 0.9},
-               'Canut':  {'speed': 1.50, 'grave': 2.0, 'reduction': 1.0}}
+#Personatges = {'Joan':   {'speed': 1.20, 'grave': 3.6, 'reduction': 0.6},
+#               'Gisela': {'speed': 1.30, 'grave': 0.9, 'reduction': 1.7},
+#               'Mar':    {'speed': 1.40, 'grave': 0.6, 'reduction': 1.4},
+#               'Emma':   {'speed': 1.40, 'grave': 0.7, 'reduction': 1.0},
+#               'Tina':   {'speed': 1.30, 'grave': 1.1, 'reduction': 1.0},
+#               'Justa':  {'speed': 1.40, 'grave': 1.8, 'reduction': 0.9},
+#               'Pompeu': {'speed': 1.40, 'grave': 2.2, 'reduction': 0.9},
+#               'Canut':  {'speed': 1.50, 'grave': 2.0, 'reduction': 1.0}}
+Personatges = {'Pare_Flynn':       {'speed': 1.20, 'grave': 3.0, 'reduction': 0.6},
+               'Germana_Aloysius': {'speed': 1.30, 'grave': 1.8, 'reduction': 0.9},
+               'Germana_James':    {'speed': 1.40, 'grave': 0.8, 'reduction': 1.4},
+               'Sra_Muller':       {'speed': 1.40, 'grave': 0.6, 'reduction': 1.0}}
 Narrador = {'speed': 1.22, 'grave': 1.6, 'reduction': 1.7}
 Narrador = "narrador"
 
