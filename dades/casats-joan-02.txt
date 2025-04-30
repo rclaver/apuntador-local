@@ -1,6 +1,3 @@
-Inici de l'escena Joan-104
-pàgina 13
-
 (En Joan entra per la porta esquerra.)
 Joan: Què passa, Gisela?
 Gisela: No res, un ligue de la Mar.
@@ -44,5 +41,3 @@ Gisela: No del tot!
 Gisela: Seguirem fent pràctiques amb l'ordinador.
 
 (Riuen, tot fent mutis)
-
-Final de l'escena Joan-104
