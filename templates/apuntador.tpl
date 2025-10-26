@@ -4,6 +4,7 @@
 </head>
 
 <body bgcolor="#FFFFFF">
+
   {% if sentencia is not defined %}
      {% set sentencia = "Escenes per a: " ~ actor %}
   {% endif %}

@@ -4,7 +4,7 @@
 var boto = "inici";
 
 // Connectar-se al servidor WebSocket
-const socket = io.connect("https://" + document.domain + ":" + location.port);
+const socket = io.connect("http://" + document.domain + ":" + location.port);
 
 // Esdeveniment que es dispara quan el servidor envia una nova línia
 socket.on('new_line', function(data) {
